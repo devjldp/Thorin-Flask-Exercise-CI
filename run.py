@@ -11,10 +11,28 @@ app = Flask(__name__)
 
 # route decorator
 
+# route es para el routing
 
-@app.route("/")
+
+@app.route("/")  # Hace referencia al indes
 def index():
     return render_template('index.html')
+
+
+# La syntasix del link en documentos sera url_for('nopmbre de la funcion') no ponemos .html
+@app.route("/about")
+def about():
+    return render_template('about.html')
+
+
+@app.route("/contact")
+def contact():
+    return render_template('contact.html')
+
+
+@app.route("/careers")
+def careers():
+    return render_template("careers.html")
 
 
 if __name__ == "__main__":  # garantiza que el servidor web se ejecute solo si el script es ejecutado directamente,
